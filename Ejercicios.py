@@ -152,6 +152,14 @@ for materia in aprobadas:
     materias.remove(materia)
 print("Tienes que repetir "+str(materias))
 #Fin del ejercicio
-
+#Colocar todas las letras del abecedario en una lista, para eliminar de la lista
+#las letras que ocupen una posicion multiple de 3 y al final mostrar la lista final
+letras=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+i=3
+for letra in range(len(letras),1,-1):
+    if letra%i==0:
+        letras.pop(letra-1)
+print(letras)
+#Fin del ejercicio 
 
 
