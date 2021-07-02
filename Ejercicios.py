@@ -161,5 +161,13 @@ for letra in range(len(letras),1,-1):
         letras.pop(letra-1)
 print(letras)
 #Fin del ejercicio 
-
+#Ingresar una palabra, para luego comparar si escrita al reves dice lo mismo
+pa=input("Ingresa una palabra ")
+def reverse(pa):
+    return ' '.joind(list(map(lambda x: x[::-1], pa.split())))
+if(reverse(pa)!=pa):
+    print("Esta palabra no es polindromo")
+else:
+    print("Esta palabra es polindromo")
+#Fin del ejercicio
 
