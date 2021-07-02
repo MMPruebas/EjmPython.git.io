@@ -170,4 +170,37 @@ if(reverse(pa)!=pa):
 else:
     print("Esta palabra es polindromo")
 #Fin del ejercicio
+#Ingresar una palabra y contar las veces que se repite las vocales dentro de ella
+#Primera opcion
+palabra=input("Ingresa una palabra: ")
+voa=palabra.count("a")
+voe=palabra.count("e")
+voi=palabra.count("i")
+voo=palabra.count("o")
+vou=palabra.count("u")
+if voa!=0:
+   print("La palabra repite: "+str(svoa)+" la letra a")
+if voe!=0:
+   print("La palabra repite: "+str(voe)+" la letra e")
+if voi!=0:
+   print("La palabra repite: "+str(voi)+" la letra i")
+if voo!=0:
+   print("La palabra repite: "+str(voo)+" la letra o")
+if vou!=0:
+   print("La palabra repite: "+str(vou)+" la letra u")
+#Nota: solo cuenta las letras minusculas
+#Fin del ejercicio 
+#Ingresar una palabra y contar las veces que se repite las vocales dentro de ella
+#Segunda ocpion
+palabra=input("Ingresa una pabalra: ")
+vocales=["a","e","i","o","u"]
+
+for vocal in vocales:
+    cant=0
+    for letra in palabra:
+        if letra == vocal:
+            cant+=1
+    print ("La vocal "+vocal+" aparece "+ str(cant)+" veces")
+#Nota: Cuenta todad las letras sin importar si es mayuscula o minusculas
+#Fin del ejercicio
 
