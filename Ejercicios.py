@@ -254,3 +254,21 @@ res=tuple(res)
 for i in range(len(res)):
     print(res[i])
 #Fin del ejercicio
+#Caputrar una lista de numeros separados por una coma, para despues sacar la media y la desviacion tipica
+lista=inout("Agrega valores a la lista separados por una coma: ")
+lista.split(',')
+n=len(lista)
+
+for i in range(n):
+    lista[i]=int(lista[i])
+lista=tuple(lista)
+sum=0
+sumsq=0
+for i in lista:
+    sum+=i
+    sumsq+=i**2
+mean=sum/n
+stdev=(sumsq/n-mean**2)**(1/2)
+print("La lista que añadiste es: " +str(lista))
+print('La media de la lista es: ',mean,' , y la desviacion tipica es: ',stdev)
+#Fin del ejercicio
