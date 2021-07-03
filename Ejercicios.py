@@ -174,21 +174,32 @@ else:
 #Primera opcion
 palabra=input("Ingresa una palabra: ")
 voa=palabra.count("a")
+voA=palabra.count("A")
+suma=voa+voA
 voe=palabra.count("e")
+voE=palabra.count("E")
+sume=voe+voE
 voi=palabra.count("i")
+voI=palabra.count("I")
+sumi=voi+voI
 voo=palabra.count("o")
+voO=palabra.count("O")
+sumo=voo+voO
 vou=palabra.count("u")
+voU=palabra.count("U")
+sumu=vou+voU
+
 if voa!=0:
-   print("La palabra repite: "+str(svoa)+" la letra a")
+   print("La palabra repite: "+str(suma)+" la letra a")
 if voe!=0:
-   print("La palabra repite: "+str(voe)+" la letra e")
+   print("La palabra repite: "+str(sume)+" la letra e")
 if voi!=0:
-   print("La palabra repite: "+str(voi)+" la letra i")
+   print("La palabra repite: "+str(sumi)+" la letra i")
 if voo!=0:
-   print("La palabra repite: "+str(voo)+" la letra o")
+   print("La palabra repite: "+str(sumo)+" la letra o")
 if vou!=0:
-   print("La palabra repite: "+str(vou)+" la letra u")
-#Nota: solo cuenta las letras minusculas
+   print("La palabra repite: "+str(sumu)+" la letra u")
+#Nota: Cuentas todas las vocales repetidas sin importar si es mayuscula o minuscula
 #Fin del ejercicio 
 #Ingresar una palabra y contar las veces que se repite las vocales dentro de ella
 #Segunda ocpion
@@ -201,6 +212,45 @@ for vocal in vocales:
         if letra == vocal:
             cant+=1
     print ("La vocal "+vocal+" aparece "+ str(cant)+" veces")
-#Nota: Cuenta todad las letras sin importar si es mayuscula o minusculas
+#Nota: Cuenta todad las letras vocales repetidas solo minusculas
 #Fin del ejercicio
+#De un arreglo con precios extraer el menor y mayor para despues imprimirlos
+numeros=['50','75','46','22','80','65','08']
+menor=min(numeros)
+print("El preciio menor es: "+str(menor))
+mayor=max(numeros)
+print("El precio mayor es: "+str(mayor))
+#Fin del ejercicio
+#Sacar el producto de los matrices predefinidas.
+a=(1,2,3)
+b=(-1,0,2)
+res=0
+for i in range(len(a)):
+    res+= a[i]*b[i]
+print("El producto de los vectores: "+str(a)+" y "+str(b)+" es: "+str(res))
+#Fin del ejercicio
+#Sacar el producto de matrices anidadas
+a=((1,2,3),
+   (4,5,6))
 
+b=((-1,0),
+   (0,1),
+   (1,1))
+
+res=[[0,0],
+     [0,0]]
+for i in range(len(a)):
+    
+    for n in range(len(b[0])):
+
+        for j in range(len(b)):
+            res[i][n]+=a[i][j]*b[j][n]
+
+for i in range(len(res)):
+    res[i]=tuple(res[i])
+
+res=tuple(res)
+
+for i in range(len(res)):
+    print(res[i])
+#Fin del ejercicio
