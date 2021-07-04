@@ -272,3 +272,17 @@ stdev=(sumsq/n-mean**2)**(1/2)
 print("La lista que añadiste es: " +str(lista))
 print('La media de la lista es: ',mean,' , y la desviacion tipica es: ',stdev)
 #Fin del ejercicio
+
+#Manipulacion de diccionarios
+
+#Preguntar al usuario sobre alguna divisa, para despues revisar si se encuentra en el diccionario de datos,
+#si se encuentra mostrar su simbolo, de lo contrario mostrar mensaje "No se encontro le divisa"
+
+divisas={'Euro':'€','Dollar':'$','Yen':'¥'}
+
+n=input("Ingresa nombre de la divisa: ")
+if n in divisas:
+    print("El simbolo de la divisa ingresada es: "+divisas[n])
+else:
+    print("La divisa ingresada no se encuentra en el diccionario")
+#Fin del ejercicio
