@@ -286,3 +286,33 @@ if n in divisas:
 else:
     print("La divisa ingresada no se encuentra en el diccionario")
 #Fin del ejercicio
+#Capturar informacion del usuario, para añadirla a un diccinario y despues imprimir los datos en pantalla
+n=input("")
+e=input("")
+d=input("")
+t=input("")
+datos={'Nombre':n,'Edad':e,'Direccion':d,'Telefono':t}
+print("Usted "+datos['Nombre']+" tiene "+datos['Edad']+" años, y vive en "+datos['Direccion']+" y su telefono es "+datos['Telefono'])
+#Fin del ejercicio
+#Capturar informacion del usuario, para añadirla a un diccionario y despues imprimir los datos en pantalla
+#Segunda solucion
+d=[]
+print("Ingrese los siguientes datos uno a uno: Nombre,Edad,Direccion,Telefono")
+for i in range(4):
+    dato=input("Ingresa dato por dato ")
+    d.append(dato)
+
+datos={'Nombre':d[0],'Edad':d[1],'Direccion':d[2],'Telefono':d[3]}
+print("Usted "+datos['Nombre']+" tiene "+datos['Edad']+" años, vive en "+datos['Direccion']+" y su dtelefono es: "+datos['Telefono'])
+#Fin del ejercicio
+#Preguntar por alguna fruta que necesite, para buscara en el diccionario fijado creado por nosotros, si la fruta
+#que necesita se encuentra en el diccionario pasar a preguntar los kilos que necesita y despues mostrar la cantidad a pagar
+# si no se encuentra la fruta en el diccionario, mostrar un mensaje notificando al usuario
+pro={'Platano':1.35,'Naranja':0.50,'Manzana':0.80,'Pera':0.25}
+prod=input("Ingresa la fruta que estas buscando: ")
+if prod in pro:
+    k=float(input("Cuantos kilos necesitas?"))
+    print("La cantidad a pagar por lo que pidio es: ",pro[prod]*k)
+else:
+    print("La fruta no se encuentra en nuestros productos")
+#Fin del ejercicio
