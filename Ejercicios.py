@@ -381,3 +381,47 @@ while continuar:
         print("La palabra ",d," no se encuentra en el diccionario")
     continuar=input("Seguir buscando palabras en el diccionario Si/No ")=="Si"
 #Fin del ejercicio
+#Gestionar facturas pendientes de la empresa, añadir facturas si asi el usuario lo requiere, y mostrar total de facturas añadidas
+#Eliminar factura y mostrar el total pagado de las facturas pagadas
+#Mostrar facturas pendientes
+fac={}
+continuar=True
+deuda=0
+deudaP=0
+while continuar:
+    print("1.-Añadir Facturas, 2.-Eliminar facturas,3.-Ver Facturas Pendientes")
+    p=inmput("Ingresa el numero de la accion que quieres realizar")
+    if p=="1":
+        print("Para añadir facturas necesitas ingresar el numero de factura seguido de dos puntos y despues el cossto de la factura")
+        print("Ejemplo: 521:250.0 ")
+        valores=input("Ingresar el numero y valor de la factura ")
+        for i in valores.splir(','):
+            clave,valor=isplit(':')
+            fac[clave]=float(valor)
+        print("Lista de facutras pendiente ")
+        for key in fac:
+            print(key,'',fac[key])
+            deuda=deuda+fac[key]
+            print("Lo pendiente por pagar de las facturas pendientes es: ",deuda)
+            deuda=deuda-deuda
+    if p=="2":
+        if len(fac.keys())==0:
+            print("Aun no hay facturas guardadas")
+        else:
+            for key in fac:
+                print(key,'',fac[key])
+            NumF=input("Inresa el numero de la factura a eliminar: ")
+            deudaP=deudaP+fact[NumF]
+            fac.pop(NumF)
+            print("El total cobrado de todas las facturas eliminadas es: ",deudaP)
+    if p=="3":
+        if len(fac.keys())==0:
+            print("Aun no hay facturas guardadas")
+        else:
+            for key in fac:
+                print(key,'',fac[key])
+                deuda=deuda+fac[key]
+            print("Deuda de las facturas pendientes: ",deuda)
+            deuda=deuda-deuda
+    continuar=input("Volver al menu? Si/No ")=="Si"
+#Fin del ejercicio
