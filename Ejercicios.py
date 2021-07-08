@@ -316,3 +316,24 @@ if prod in pro:
 else:
     print("La fruta no se encuentra en nuestros productos")
 #Fin del ejercicio
+#Que el usuario ingrese una fecha con el formato dd/mm/aaaa
+#Despues mostrar la fecha cambiando el mes con numero por el mes con letra
+meses={1:'Enero',2:'Febrero',3:'Marzo',4:'Abril',5:'Mayo',6:'Junio',7:'Julio',8:'Agosto',9:'Septiembre',10:'Octubre',11:'Noviembre',12:'Diciembre'}
+fecha=input('Introduce una fecha con el formato dd/mm/aaaa ')
+#Aqui añadimos los datos ingresados por el usario a una lita, el separarlos
+#por / nos ayuda a que cada dato tome un lugar dentro de la lista para despues poder llamarlo de forma independiente
+fecha=fecha.split('/')
+
+print (fecha)
+print(fecha[0], 'de', meses[int(fecha[1])], 'de', fecha[2])
+#Fin del ejercicio
+#Almacenar un diccionario de datos predefinido que contenga el nombre de las materias junto con el numero de creditos
+#que estas otorgan al aprobarlas, al final se tiene que colocar en pantalla el nombre de cada materia junto con los
+#puntos que da y sacar una suma total de los creditos que se pueden obtener
+materias={'Matematicas':6,'Fisica':4,'Quimica':5}
+print("A continuacion se muestran las materias dentro de nuestro diccionario a la par de los creditos que se pueden obtener")
+for key in materias:
+    print (key,'tiene',materias[key])
+cred=materias['Matematicas']+materias['Quimica']+materias['Fisica']
+print("Numero total de creditos del curso: "+str(cred))
+#Fin del ejercicio
