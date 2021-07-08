@@ -337,3 +337,47 @@ for key in materias:
 cred=materias['Matematicas']+materias['Quimica']+materias['Fisica']
 print("Numero total de creditos del curso: "+str(cred))
 #Fin del ejercicio
+#Llenar un diccionario vacio con informacion que el usuario añade una a una
+datos={}
+continuar=True
+while continuar:
+    dato=input("Nombre de la llave ")
+    datod=input("Valor de la llave ")
+    datos[dato]=datod
+    print(datos)
+    continuar=input("Quieres añadir mas info? (Si/No) ")=="Si"
+print(datos)
+#Fin del ejercicio
+#Almacenar en un diccionario vacio articulos y sus precios simulado una cesta de compra, hata que el usuario decida
+#terminar, despues se debe mostrar la lista de compra y el coste total
+datos={}
+continuar=True
+suma=0
+while continuar:
+    dato=input("Nombre del producto ")
+    datop=float(input("Valor del producto "))
+    datos[dato]=datod
+    continuar=input("Continuar añadiendo productos? Si/No ")=="Si"
+for key in datos:
+    print(key,'',datos[key])
+    suma=suma+datos[key]
+print("Total",suma)
+#Fin del ejercico
+#Llenar diccionario vacio con palabras en español y su traduccion en ingles separadas por  dos puntos y al final una coma
+#Ejemplo: Hola:Hello,Rojo:Red. Ya que se tengan todas las palabras que el usuario quiera dar enter
+#Depues prguntar al usuario una palabra en español para buscarla en el diccionario y traducirla, si no se enuentra 
+#Colocarla sin traducir
+p={}
+continuar=True
+palabras=input("Ingresa las palabras ")
+for i in palabras.splir(','):
+    clave,valor=isplit(':')
+    p[clave]=valor
+while continuar:
+    d=input("Buscar palabra a traducir ")
+    if d in p:
+        print(p[d])
+    else:
+        print("La palabra ",d," no se encuentra en el diccionario")
+    continuar=input("Seguir buscando palabras en el diccionario Si/No ")=="Si"
+#Fin del ejercicio
