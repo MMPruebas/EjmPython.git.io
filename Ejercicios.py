@@ -464,4 +464,31 @@ while opcion !='6':
                 print(clave,valor['nombre'])
     opcion=input("Menu de opciones:\n (1)Añadir cliente\n(2)Eliminar Cliente\n(3)Mostrar Cliente\n(4)Listar Clientes\n(5)Listar Clientes Vip\n(6)Terminar ")
     #Fin del ejercicio
-    
+    #Mostrarle al usuario un menuo donde le de opcion de: Añadir Cliente,BuscarCliente o ListarClientes
+    clientes={}
+continuar=''
+while continuar !='4':
+    if continuar=='1':
+        nif=input("Introduce el numero de identificacion del cliente: ")
+        nombre=input("Introduce el nombre del cliente: ")
+        telefono=input("Coloca el telefono del cliente: ")
+        correo=input("Introduce el correo del cliente: ")
+        cliente={'Nombre':nombre,'Telefono':telefono,'Correo':correo}
+        clientes[nif]=cliente
+    if continuar=='2':
+        nif=input("Ingresa el numero de identificacion del clinete: ")
+        if nif in clientes:
+            print('NIF: ',nif)
+            for clave,valor in clientes[nif].items():
+                print(clave.title()+':',valor)
+        else:
+            print("No existe el cliente con el numero de identificacion: ",nif)
+    if continuar=='3':
+        print("Lista de clientes: ")
+        if len(clientes) !=0:
+            for clave,valor in clientes.items():
+                print(clave,valor['Nombre'])
+        else:
+            print("Aun no existen clientes en la base de datos :) ")
+    continuar=input("Menu:\n(1)Añadir cliente\n(2)Buscar Cliente\n(3)Listar Clientes\n(4)Salir\n")
+#Fin del ejercicio
