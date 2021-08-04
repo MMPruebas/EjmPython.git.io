@@ -492,3 +492,20 @@ while continuar !='4':
             print("Aun no existen clientes en la base de datos :) ")
     continuar=input("Menu:\n(1)Añadir cliente\n(2)Buscar Cliente\n(3)Listar Clientes\n(4)Salir\n")
 #Fin del ejercicio
+#Ejemplos de funciones.
+#Pasando datos de una lista a la funcion
+platillos=[]
+def menu(*platos):
+    print("El menu de hoy es: ",end="")
+    for plato in platos:
+        print(plato,end=', ')
+    return
+while True:
+    platillo=input("Ingresa un platillo al menu. ")
+    platillos.append(platillo)
+    s=input("¿Salir? Si/No")
+    if s=="Si":
+        break
+menu(platillos)
+#Fin del ejemplo.
+
