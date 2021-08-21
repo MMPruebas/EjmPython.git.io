@@ -508,4 +508,15 @@ while True:
         break
 menu(platillos)
 #Fin del ejemplo.
+#Ejercicios con funciones
+#Capturar un numero positivo, para despues devolver su factorial
+def valF(n):
+    tmp=1
+    for i in range(n):
+        tmp*=i+1
+    print("El valor factorial de: "+str(n)+" es: "+str(tmp))
+    return
 
+valN=int(input("Ingresa un numero entero positivo"))
+
+valF(n)
