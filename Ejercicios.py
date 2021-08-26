@@ -508,7 +508,10 @@ while True:
         break
 menu(platillos)
 #Fin del ejemplo.
+
 #Ejercicios con funciones
+
+
 #Capturar un numero positivo, para despues devolver su factorial
 def valF(n):
     tmp=1
@@ -520,3 +523,39 @@ def valF(n):
 valN=int(input("Ingresa un numero entero positivo"))
 
 valF(n)
+#Fin Ejercicio 
+
+#Calcular el total de una factura
+#pidiendo al usuario que ingrese el valor de factura sin iva
+#y el porcentaje de iva que se añadira, si el usuario no indica un porcentaje 
+#añadir por defecto 21%
+def infoFac(v,piv=21):
+    if(piv==21):
+        res=(v+(v*21)/100)
+        print("Se aplico por defecto el: 21% de iva a la factura, el valor final es: "+str(res))
+    else:
+        res=(v+(v*piv)/100)
+        print("Se le aplio el: "+str(piv)+"%, el valor final de la factura es de: "+str(res))
+    return
+
+v=float(input("Cual es el subtotal de la factura? "))
+n=input("Ingresar iva? ")
+if(n=="si"):
+    piv=int(input("Cual es el procentaje de iva a aplicar? "))
+    infoFac(v, piv)
+else:
+    infoFac(v)
+
+#Calular el volumen de un cilindro, obteniendo el radio y la altura:
+def vCilindro(r,h):
+    print("El volumen del cilindreo es: "+str(aCirculo(r)*h))
+    return
+def aCirculo(r):
+    pi=3.1416
+    return  pi*(r*r)
+
+r=int(input("Ingresa el radio del cilindro: "))
+h=int(input("Ingresa la altura del cilindro: "))
+
+
+vCilindro(r, h)
