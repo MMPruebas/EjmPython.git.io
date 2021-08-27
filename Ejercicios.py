@@ -559,3 +559,45 @@ h=int(input("Ingresa la altura del cilindro: "))
 
 
 vCilindro(r, h)
+#Fin del ejercicio 
+#Ingresar valores a una lista, pasarlo a una funcion donde se sacara la media de dicha lista
+def media(lista):
+    n=len(lista)
+    sum=0
+    for i in lista:
+        sum+=i
+    media=sum/n
+    print("La longitud de la lista es: "+str(n))
+    print("La media es: "+str(media))
+    return
+
+l=[]
+while True:
+    li=float(input("Ingresa un valor a la lista: "))
+    l.append(li)
+    v=input("Seguir añadiendo valores? Si/No ")
+    if(v=="Si"):
+        break
+print("Tu lista es: "+str(l))
+media(l)
+#Fin del Ejercicio
+
+#Escribir una funcion que reciba una muestra de numeros en lista, y devulva otra lista con sus cuadrados
+def listCu(lista):
+    n=[]
+    for i in lista:
+        n.append(i**2)
+    print("Los valores de la lista cuadrados son: "+str(n))
+    return
+l=[]
+while True:
+    li=float(input("Ingresa un valor a la lista: "))
+    l.append(li)
+    v=input("Añadir un nuevo valor a la lista? Si/No ")
+    if(v=="Si"):
+        break
+    print("Tu lista original es: "+str(l))
+    listCu(l)
+#Fin del ejercicio
+
+
