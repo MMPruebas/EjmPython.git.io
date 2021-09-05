@@ -599,5 +599,32 @@ while True:
     print("Tu lista original es: "+str(l))
     listCu(l)
 #Fin del ejercicio
-
-
+#Escribir una funcion que reciba una muestra de numeros en una lista y devuelva su media,
+#varianza y desviacion tipica
+def listaV(lista):
+    n=len(lista)
+    sum=0
+    sumsq=0
+    sl=0
+    for i in lista:
+        sum+=i
+        sumsq+=i**2
+    media=sum/n
+    for j in range(0,n):
+        sl=sl+(lista[j]-media)*(lista[j]-media)
+    vari=sl/n
+    desTi=(sumsq/n-media**2)**(1/2)
+    print("La media de la lista es: "+str(media))
+    print("La desviacion tipica es: "+str(desTi))
+    print("La varianza es: "+str(vari))
+    return
+l=[]
+while True:
+    li=float(input("Ingresa un valor a la lista: "))
+    l.append(li)
+    v=input("Seguir añadiendo valores a la lista? Si/No ")
+    if(v=="No"):
+        break
+print("Tu lista es: "+str(l))
+listaV(l)
+#Fin del ejercicio
