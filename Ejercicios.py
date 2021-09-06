@@ -628,3 +628,30 @@ while True:
 print("Tu lista es: "+str(l))
 listaV(l)
 #Fin del ejercicio
+#Escribir dos funciones, una que calcule el maximo comun divisor
+#y otra que calcule el minimo comun multiplo
+def maxCd(nuno,ndos):
+    rest=0
+    while(ndos>0):
+        rest=ndos
+        ndos=nuno%ndos
+        nuno=rest
+    print("Maximo comun divisor: "+str(nuno))
+    return
+def minCm(nuno,ndos):
+    if nuno>ndos:
+        greater=nuno
+    else:
+        greater=ndos
+    while(greater % nuno != 0) or (greater % ndos != 0):
+        greater+=1
+    print("Minimo comun multiplo: "+str(greater))
+    return
+
+print("Ingresa dos numeros enteros, para saber su maximo comun divisor,")
+prinn("y su minimo comun multiplo.")
+nuno=int(input("Ingresa el primer valor: "))
+ndos=int(input("Ingresa el segundo valor: "))
+maxCd(nuno,ndos)
+minCm(nuno,ndos)
+#Fin del ejercicio
