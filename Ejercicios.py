@@ -655,3 +655,31 @@ ndos=int(input("Ingresa el segundo valor: "))
 maxCd(nuno,ndos)
 minCm(nuno,ndos)
 #Fin del ejercicio
+#Escribir un programa que pregunte al usuario, si desea convertir un valor binario a decimal, o un valor decimal a binario.
+def binario(b):
+    bin=[]
+    while b > 0:
+        bin.append(str(b % 2))
+        b//=2
+    bin.reverse()
+    return print("".joind(bin))
+def decimal(d):
+    deci=list(d)
+    deci.reverse()
+    sum=0
+    for i in range(len(deci)):
+        sum+=int(deci[i])*2**i
+    return print("El valor decimal es: "+str(sum))
+
+while True:
+    DoB=input("Desas obtener un valor decimal o un binario? Binario/Decimal ")
+    if(DoB=="Binario"):
+        b=int(input("Ingresa el valor decimal "))
+        binario(b)
+    else:
+        d=input("Ingresa el numero binario ")
+        decimal(d)
+    seguir=input("Continuar convirtiendo valores? S/N ")
+    if(seguir=="N"):
+        break
+#Fin del ejercicio
