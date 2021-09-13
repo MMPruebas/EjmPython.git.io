@@ -683,3 +683,30 @@ while True:
     if(seguir=="N"):
         break
 #Fin del ejercicio
+
+#Realiza un programa que reciba una oracion y devuelva la cantidad de veces que se repite cada palabra
+#dentro de la oracion
+def count_palabras(text):
+    text=text.split()
+    palabras={}
+    for i in text:
+        if i in palabras:
+            palabras[i] +=1
+        else:
+            palabras[i] = 1
+    return palabras
+def most_repeticion(palabras):
+    max_palabra= ''
+    max_frecuencia = 0
+    for palabra, frecuencia in palabras.items():
+        if frecuencia > max_frecuencia:
+            max_palabra = palabra
+            max_frecuencia = frecuencia
+    return max_palabra, max_frecuencia
+while True:
+    text=input("Ingresa una oracion: ")
+    print(count_palabras(text))
+    print(most_repeticion(count_palabras(text)))
+    seguir=input("Seguir en el programa?  S/N ")
+    if (seguir=="N"):
+        break
