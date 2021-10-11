@@ -710,3 +710,26 @@ while True:
     seguir=input("Seguir en el programa?  S/N ")
     if (seguir=="N"):
         break
+
+#Fin del ultimo ejercicio de funciones.
+
+#Ejemplo de funciones anonimas o lambda
+area=lambda base,altura: base*altura
+print(area(4,5))
+#Resultado 20
+
+#Codigo ejemplo para Crear Codigo de barras
+from barcode import EAN13
+from barcode.write import ImageWriter
+
+ubicacion=r'C:\Users\Daniel\Desktop'
+
+numero="012345678912"
+
+codigo=EAN13(numero,writer=ImageWriter())
+codigo.save(ubicacion+"/CodBarras")
+
+#Fin de codigo para crear codigo de barras
+
+#Ejercicios Programacion funcional.
+
