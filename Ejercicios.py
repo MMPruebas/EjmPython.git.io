@@ -730,6 +730,34 @@ codigo=EAN13(numero,writer=ImageWriter())
 codigo.save(ubicacion+"/CodBarras")
 
 #Fin de codigo para crear codigo de barras
+#Codigo para crear un codigo QR personalizado 
+import qrcode
+from PIL import Image
+
+imagenLogo=r'C:\Users\Daniel\Desktop\plata.jpg'
+logo=Image.open(imagenLogo)
+
+tamañoImagen=int((float(logo.size[1])*float(100/float(logo.size[0]))))
+logo=logo.resize((100,tamañoImagen),Image.ANTIALIAS)
+QRcode=qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_H)
+
+#A continuacion se llenan los datos del codigo qr
+url='https://github.com/MMPruebas/'
+QRcode.add_data(url)
+QRcode.make
+#Aqui controlo el color del codigo Qr y el color del fondo
+QRcolor='Black'
+QRfondo='White'
+
+#Aqui se agrega nuestra img al codigo
+Qrimg=QRcode.make_image(fill_color=QRcolor,back_color=QRfondo).convert('RGB')
+
+pos=((Qrimg.size[0] - logo.size[0]) // 2,(Qrimg.size[1] - logo.size[1]) // 2)
+Qrimg.paste(logo,pos)
+#Se guarda el codigo Qr en la direccion definida
+Qrimg.save(r'C:\Users\Daniel\Desktop\TestCodQr.png')
+
+#Fin del ejercicio
 
 #Ejercicios Programacion funcional.
 
