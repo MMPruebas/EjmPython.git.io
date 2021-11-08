@@ -760,4 +760,39 @@ Qrimg.save(r'C:\Users\Daniel\Desktop\TestCodQr.png')
 #Fin del ejercicio
 
 #Ejercicios Programacion funcional.
+#Escribir un programa que contenga una funcion para aplicar un descuento, otra que aplique el iva y una ultima que reciba un diccionario
+#con los precios y porcentajes.
 
+def aplicarDescuento(precio,descuento):
+    return precio-precio*descuento/100
+def aplicarIva(precio,iva):
+    return precio+precio*iva/100
+
+def CarroCompras(carro,funcion):
+    total=0
+    for precio,porcentaje in carro.items():
+        total +=funcion(precio,porcentaje)
+    return total
+
+def ejecutar():
+    carro={}
+    continuar=True
+    while continuar:
+        valor=int(input("Valor del producto: "))
+        desIva=int(input("Ingresa el porcentaje a aplicar de descuento o iva: "))
+        carro[valor]=desIva
+        continuar=input("Ingresar mas datos? Si/No ")=="Si"
+    op=input("Ingresar la operacion a realizar: Descuento/Iva ")
+    op.lower()
+    if(op=="descuento"):
+        print('El precio de compra ya con el descuento aplicado es: ',CarroCompras(carro,aplicarDescuetno))
+    else:
+        print('El precio de compra ya con iva aplicado es: ',CarroCompras(carro,aplicarIva))
+    carro.clear()
+    return
+continuar=True
+while continuar:
+    ejecutar()
+    continuar=input("Seguir con el programa? Si/No ")=="Si"
+
+#Fin del ejemplo #
