@@ -796,3 +796,42 @@ while continuar:
     continuar=input("Seguir con el programa? Si/No ")=="Si"
 
 #Fin del ejemplo #
+#Simula una calculadora cientifica que calcule el seno, coseno, tangente, exponencial y logaritmo neperiano
+
+from math import sin, cos,tan,exp,log
+def ejFuncion(f,n):
+    funciones={'sin':sin,'cos':cos,'tan':tan,'exp';exp,'log':log}
+    resultado={}
+    for i in range(1,n+1):
+        resultado[i]=funciones[f](i)
+    return resultado
+
+def calculadora():
+    f=input("Ingresa una funcion (sin, cos, tan, exp, log): ")
+    n=int(input("ingresa un valor entero positivo: "))
+    for i,j in ejFuncion(f, n).items():
+        print(i,'\t',j)
+    return
+calculadora()
+# Fin del ejercicio #
+#Escribir una funcion que reciba otra funcion y una lista, y devuelva
+#otra lista con el resultado de aplicar la funcion dada a cada elemento de la lista.
+def aplicaFuncion(funcion,lista):
+    l=[]
+    for i in lista:
+        l.append(funcion(i))
+    return l
+def cuadrado(n):
+    return n*n
+def inicio():
+    continuar=True
+    lista=[]
+    while continuar:
+        n=int(input("Ingresa un valor a la lista: "))
+        lista.append(n)
+        continuar=input("Seguir añadiendo vlores? Si/No ")=="Si"
+
+    print(aplicaFuncion(cuadrado, lista))
+    return
+inicio()
+#Fin del ejercicio
